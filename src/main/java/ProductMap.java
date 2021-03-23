@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ProductMap {
 
-    public static void main(String[] args) {
+    public static void productMap(String[] args) {
         Map<String, Product> map = new TreeMap<String, Product>();
 
         Product a = new Product("Calça Masculina Azul", "Calça masculina azul 100% algodão", "Moda Masculina", 49.90, 5);

@@ -1,5 +1,6 @@
-import java.util.Scanner;
+import org.junit.Test;
 
+import java.util.Scanner;
 public class Menu {
 
         public static void menu(){
@@ -26,37 +27,6 @@ public class Menu {
 
         public static void searchProduct(){
             System.out.println("Você entrou no método Consulta.");
-        }
-
-        public static void main(String[] args) {
-            int opcao;
-            Scanner entrada = new Scanner(System.in);
-
-            do{
-                menu();
-                opcao = entrada.nextInt();
-
-                switch(opcao){
-                    case 1:
-                        addProduct();
-                        break;
-
-                    case 2:
-                        editProduct();
-                        break;
-
-                    case 3:
-                        deleteProduct();
-                        break;
-
-                    case 4:
-                        searchProduct();
-                        break;
-
-                    default:
-                        System.out.println("Opção inválida.");
-                }
-            } while(opcao != 0);
         }
     }
 
