@@ -1,6 +1,6 @@
-import org.junit.Test;
+import java.util.Map;
+import java.util.TreeMap;
 
-import java.util.Scanner;
 public class Menu {
 
         public static void menu(){
@@ -14,6 +14,7 @@ public class Menu {
         }
 
         public static void addProduct(){
+            Map<String, Product> map = new TreeMap<String, Product>();
             System.out.println("Add product");
         }
 
