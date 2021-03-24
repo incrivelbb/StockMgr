@@ -50,8 +50,8 @@ public class Menu {
 
             Product product = new Product();
 
-            Scanner textEntry = new Scanner(System.in);
-            String name = textEntry.next();
+            Scanner entry = new Scanner(System.in);
+            String name = entry.next();
 
             product.setName(name);
 
