@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 import java.util.*;
 
 
@@ -48,12 +46,16 @@ public class Menu {
     }
 
         public static void addProduct() {
-            System.out.println("Enter the product name");
-            Scanner text = new Scanner(System.in);
-            String textEntry = text.next();
+            System.out.println("Please insert the product's name");
+
             Product product = new Product();
-            product.setName(textEntry);
-        }
+
+            Scanner textEntry = new Scanner(System.in);
+            String name = textEntry.next();
+
+            product.setName(name);
+
+    }
 
         public static void editProduct(){
             System.out.println("Edit product.");
