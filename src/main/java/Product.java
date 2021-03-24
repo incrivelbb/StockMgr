@@ -1,11 +1,15 @@
 public class Product {
-    private String name;
-    private String description;
-    private String category;
+    String name;
+    String description;
+    String category;
     double price;
     int quantity;
 
-    Product(String name, String description,String category, double price, int quantity) {
+   public Product(){
+
+   }
+
+   public Product(String name, String description,String category, double price, int quantity) {
         this.name = name;
         this.description = description;
         this.category = category;
