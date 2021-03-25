@@ -23,6 +23,10 @@ public class Menu {
             selectedOption = entry.nextInt();
 
             switch (selectedOption) {
+                case 0:
+                    System.out.println("Good Bye!");
+                    System.exit(0);
+
                 case 1:
                     addProduct();
                     break;
@@ -40,21 +44,51 @@ public class Menu {
                     break;
 
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("Invalid Option, please choose another one!.");
             }
-        } while (selectedOption != 0);
+        } while (true);
     }
 
         public static void addProduct() {
-            System.out.println("Please insert the product's name");
+
 
             Product product = new Product();
-
             Scanner entry = new Scanner(System.in);
-            String name = entry.next();
 
+            System.out.println("Please insert the product's name");
+            String name = entry.next();
             product.setName(name);
 
+            System.out.println("Please insert the product's description");
+            String description = entry.next();
+            product.setDescription(description);
+
+
+                System.out.println("Please insert the product's price");
+                double price = entry.nextDouble();
+
+                if (entry.hasNextDouble()) {
+                    product.setPrice(price);
+                }
+
+                else {
+                    System.out.println("Please insert a valid amount");
+                    entry.next();
+                }
+
+
+
+                System.out.println("Please insert the product's quantity");
+                int quantity = entry.nextInt();
+
+                if (entry.hasNextInt()) {
+                    product.setQuantity(quantity);
+                }
+                else {
+                    System.out.println("Please insert a valid amount");
+                    System.out.println(product.getName() + product.getDescription() + product.getPrice() + product.getQuantity());
+                    entry.next();
+                }
     }
 
         public static void editProduct(){
@@ -68,6 +102,9 @@ public class Menu {
         public static void searchProduct(){
             System.out.println("Você entrou no método Consulta.");
         }
+
+
+
 
 }
 
