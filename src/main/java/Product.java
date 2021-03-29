@@ -1,6 +1,10 @@
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Product {
+
+    ArrayList<String> productList = new ArrayList<>();
+
     String name;
     String description;
     String category;
@@ -29,6 +33,7 @@ public class Product {
     }
 
     public void setName(String name) {
+        productList.add(name);
         this.name = name;
     }
 
@@ -37,6 +42,7 @@ public class Product {
     }
 
     public void setDescription(String description) {
+        productList.add(description);
         this.description = description;
     }
 
@@ -45,6 +51,7 @@ public class Product {
     }
 
     public void setCategory(String category) {
+        productList.add(category);
         this.category = category;
     }
 
@@ -53,6 +60,7 @@ public class Product {
     }
 
     public void setPrice(BigDecimal price) {
+        productList.add(String.valueOf(price));
         this.price = price;
     }
 
@@ -61,6 +69,7 @@ public class Product {
     }
 
     public void setQuantity(int quantity) {
+        productList.add(String.valueOf(quantity));
         this.quantity = quantity;
     }
 
@@ -69,6 +78,7 @@ public class Product {
     }
 
     public void setProductId(int productId) {
+        productList.add(String.valueOf(id));
         this.productId = productId;
     }
 

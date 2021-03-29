@@ -11,8 +11,8 @@ public class ProductMap {
         map.put("Calça Masculina Azul", a);
         System.out.println(map);
 
-        Collection<Product> products = map.values();
-        for (Product b : products) {
+        Collection<Product> productList = map.values();
+        for (Product b : productList) {
             System.out.println(b);
         }
     }
