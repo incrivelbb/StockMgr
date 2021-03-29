@@ -5,7 +5,9 @@ import java.util.*;
 public class Menu {
 
     public static void menu() {
+        System.out.println("----------------------------------------------------------------");
         System.out.println("\tWelcome to Stock Manager! Please choose an option below:");
+        System.out.println("----------------------------------------------------------------");
         System.out.println("0. End Session");
         System.out.println("1. Add product");
         System.out.println("2. Edit an existing product");
@@ -121,7 +123,7 @@ public class Menu {
     }
 
     public static void searchProduct(){
-        System.out.println("Você entrou no método Consulta.");
+        System.out.println(Product.productList);
     }
 }
 

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Product {
 
-    ArrayList<String> productList = new ArrayList<>();
+    static ArrayList<String> productList = new ArrayList<>();
 
     String name;
     String description;
