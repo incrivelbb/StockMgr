@@ -1,15 +1,17 @@
+import java.math.BigDecimal;
+
 public class Product {
     String name;
     String description;
     String category;
-    double price;
+    BigDecimal price;
     int quantity;
 
    public Product(){
 
    }
 
-   public Product(String name, String description,String category, double price, int quantity) {
+   public Product(String name, String description,String category, BigDecimal price, int quantity) {
         this.name = name;
         this.description = description;
         this.category = category;
@@ -41,11 +43,11 @@ public class Product {
         this.category = category;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

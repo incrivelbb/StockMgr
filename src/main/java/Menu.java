@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.*;
 
 
@@ -13,7 +14,7 @@ public class Menu {
         System.out.println("Please, select and option and press ENTER:");
     }
 
-        public static void mainMenu() {
+    public static void mainMenu() {
 
         int selectedOption;
         Scanner entry = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class Menu {
                     break;
 
                 case 2:
-                    Menu.editProduct();
+                    editProduct();
                     break;
 
                 case 3:
@@ -49,47 +50,65 @@ public class Menu {
         } while (true);
     }
 
-        public static void addProduct() {
+    public static void addProduct() {
+
+        Product product = new Product();
+        Scanner entry = new Scanner(System.in);
+
+        System.out.println("Please insert the product's name");
+        String name = entry.next();
+        product.setName(name);
+
+        System.out.println("Please insert the product's description");
+        String description = entry.next();
+        product.setDescription(description);
 
 
-            Product product = new Product();
-            Scanner entry = new Scanner(System.in);
+        System.out.println("Please insert the product's price");
 
-            System.out.println("Please insert the product's name");
-            String name = entry.next();
-            product.setName(name);
+        boolean placeholder = false;
 
-            System.out.println("Please insert the product's description");
-            String description = entry.next();
-            product.setDescription(description);
+        do {
+            if (entry.hasNextBigDecimal()) {
+                BigDecimal price = entry.nextBigDecimal();
+                product.setPrice(price);
 
+                placeholder = true;
 
-                System.out.println("Please insert the product's price");
-                double price = entry.nextDouble();
+            } else {
 
-                if (entry.hasNextDouble()) {
-                    product.setPrice(price);
-                }
+                System.out.println("Please insert a valid amount");
+                entry.next();
+            }
+        } while (!placeholder);
 
-                else {
-                    System.out.println("Please insert a valid amount");
-                    entry.next();
-                }
+        System.out.println("Please insert the product's quantity");
 
+        placeholder = false;
 
+        do {
 
-                System.out.println("Please insert the product's quantity");
+            if (entry.hasNextInt()) {
                 int quantity = entry.nextInt();
+                product.setQuantity(quantity);
 
-                if (entry.hasNextInt()) {
-                    product.setQuantity(quantity);
-                }
-                else {
-                    System.out.println("Please insert a valid amount");
-                    System.out.println(product.getName() + product.getDescription() + product.getPrice() + product.getQuantity());
-                    entry.next();
-                }
+                placeholder = true;
+
+            } else {
+                System.out.println("Please insert a valid amount");
+                entry.next();
+            }
+        } while (!placeholder);
+
+
+        System.out.println( product.getName() + product.getDescription() + product.getPrice() + product.getQuantity());
+
+        System.out.println("Please insert the product's category");
+        String category = entry.next();
+        product.setCategory(category);
+
     }
+
 
         public static void editProduct(){
             System.out.println("Edit product.");
@@ -106,6 +125,6 @@ public class Menu {
 
 
 
-}
+    }
 
 
