@@ -107,24 +107,22 @@ public class Menu {
         String category = entry.next();
         product.setCategory(category);
 
-    }
-
-
-        public static void editProduct(){
-            System.out.println("Edit product.");
-        }
-
-        public static void deleteProduct(){
-            System.out.println("Delete Product");
-        }
-
-        public static void searchProduct(){
-            System.out.println("Você entrou no método Consulta.");
-        }
-
-
-
+        product.setProductId(product.productId);
 
     }
+
+
+    public static void editProduct(){
+        System.out.println("Edit product.");
+    }
+
+    public static void deleteProduct(){
+        System.out.println("Delete Product");
+    }
+
+    public static void searchProduct(){
+        System.out.println("Você entrou no método Consulta.");
+    }
+}
 
 

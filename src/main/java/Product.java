@@ -6,17 +6,22 @@ public class Product {
     String category;
     BigDecimal price;
     int quantity;
+    int productId;
 
-   public Product(){
+    private static int id = 1;
 
-   }
 
-   public Product(String name, String description,String category, BigDecimal price, int quantity) {
+    public Product() { }
+
+    public Product(String name, String description, String category, BigDecimal price, int quantity) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
         this.quantity = quantity;
+
+        this.productId = getGeneratedId();
+
     }
 
     public String getName() {
@@ -57,6 +62,18 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    private static int getGeneratedId(){
+        return id++;
     }
 
 }
