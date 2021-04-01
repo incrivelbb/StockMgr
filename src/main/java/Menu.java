@@ -103,8 +103,6 @@ public class Menu {
         } while (!placeholder);
 
 
-        System.out.println( product.getName() + product.getDescription() + product.getPrice() + product.getQuantity());
-
         System.out.println("Please insert the product's category");
         String category = entry.next();
         product.setCategory(category);
