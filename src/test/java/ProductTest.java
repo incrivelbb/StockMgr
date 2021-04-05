@@ -4,12 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
+    @Test
+    void setName() {
     }
 
     @Test
@@ -17,16 +13,13 @@ class ProductTest {
     }
 
     @Test
-    void setName() {
+    void setDescription() {
     }
 
     @Test
     void getDescription() {
     }
 
-    @Test
-    void setDescription() {
-    }
 
     @Test
     void getCategory() {
